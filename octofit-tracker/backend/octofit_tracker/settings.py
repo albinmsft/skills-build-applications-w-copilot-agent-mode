@@ -73,8 +73,13 @@ TEMPLATES = [
 WSGI_APPLICATION = "octofit_tracker.wsgi.application"
 
 
-# Database
-# MongoDB connection will now be handled directly using pymongo.
+# Database configuration using djongo
+DATABASES = {
+    'default': {
+        'ENGINE': 'djongo',
+        'NAME': 'octofit_db',
+    }
+}
 
 
 # Password validation
